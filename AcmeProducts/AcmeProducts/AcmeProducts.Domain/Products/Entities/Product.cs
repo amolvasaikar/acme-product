@@ -1,29 +1,52 @@
 ﻿using AcmeProducts.Domain.Common;
+using AcmeProducts.Domain.ProductLines.Entities;
 
 namespace AcmeProducts.Domain.Products.Entities
 {
     public class Product : AuditableBaseEntity
     {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         private Product()
         {
         }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public Product(string name, double price, string barCode)
+        public Product(string productName, double buyPrice, string msrp ,long productLineId , string productCode, 
+            string productScale, string productVendor , string productDescription , int quantityInStock)
         {
-            Name = name;
-            Price = price;
-            BarCode = barCode;
+            ProductName = productName;
+            BuyPrice = buyPrice;
+            MSRP = msrp;
+            ProductLineId = productLineId;
+            ProductCode = productCode;
+            ProductScale = productScale;
+            ProductVendor = productVendor;
+            ProductDescription = productDescription;
+            QuantityInStock = quantityInStock;
+            BuyPrice = buyPrice;
         }
-        public string Name { get; private set; }
-        public double Price { get; private set; }
-        public string BarCode { get; private set; }
+        public string ProductCode { get; private set; }
+        public string ProductName { get; private set; }
+        public string? ProductScale { get; private set; }
+        public string? ProductVendor { get; private set; }
+        public string? ProductDescription { get; private set; }
+        public int? QuantityInStock { get; private set; }
 
-        public void Update(string name, double price, string barCode)
+        public double BuyPrice { get; private set; }
+        public string MSRP { get; private set; }
+        public long ProductLineId { get; set; }
+
+        public ProductLine ProductLine { get; set; }
+        public void Update(string productName, double buyPrice, string msrp, long productLineId, string productCode,
+            string productScale, string productVendor, string productDescription, int quantityInStock)
         {
-            Name = name;
-            Price = price;
-            BarCode = barCode;
+            ProductName = productName;
+            BuyPrice = buyPrice;
+            MSRP = msrp;
+            ProductLineId = productLineId;
+            ProductCode = productCode;
+            ProductScale = productScale;
+            ProductVendor = productVendor;
+            ProductDescription = productDescription;
+            QuantityInStock = quantityInStock;
+            BuyPrice = buyPrice;
         }
     }
 }

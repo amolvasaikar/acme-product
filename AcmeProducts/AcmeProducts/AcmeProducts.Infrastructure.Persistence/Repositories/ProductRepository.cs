@@ -27,7 +27,7 @@ namespace AcmeProducts.Infrastructure.Persistence.Repositories
 
             if (!string.IsNullOrEmpty(name))
             {
-                query = query.Where(p => p.Name.Contains(name));
+                query = query.Where(p => p.ProductName.Contains(name));
             }
 
             return await Paged(

@@ -1,25 +1,39 @@
 ﻿using AcmeProducts.Domain.Products.Entities;
+using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace AcmeProducts.Domain.Products.Dtos
 {
     public class ProductDto
     {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public ProductDto()
         {
         }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+
         public ProductDto(Product product)
         {
             Id = product.Id;
-            Name = product.Name;
-            Price = product.Price;
-            BarCode = product.BarCode;
+            ProductName = product.ProductName;
+            ProductLineId = product.ProductLineId;
+            ProductCode = product.ProductCode;
+            ProductScale = product.ProductScale;
+            ProductVendor = product.ProductVendor;
+            ProductDescription = product.ProductDescription;
+            QuantityInStock = product.QuantityInStock;
+            BuyPrice = product.BuyPrice;
+            MSRP = product.MSRP;
         }
         public long Id { get; set; }
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public string BarCode { get; set; }
+        public string ProductCode { get; private set; }
+        public string ProductName { get; private set; }
+        public string? ProductScale { get; private set; }
+        public string? ProductVendor { get; private set; }
+        public string? ProductDescription { get; private set; }
+        public int? QuantityInStock { get; private set; }
+
+        public double BuyPrice { get; private set; }
+        public string MSRP { get; private set; }
+        public long ProductLineId { get; set; }
 
     }
 }

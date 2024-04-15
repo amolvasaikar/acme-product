@@ -12,7 +12,8 @@ namespace AcmeProducts.Application.Features.Products.Commands.CreateProduct
     {
         public async Task<BaseResult<long>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
-            var product = new Product(request.Name, request.Price, request.BarCode);
+            var product = new Product(request.ProductName,request.BuyPrice,request.MSRP,request.ProductLineId,request.ProductCode,
+                request.ProductScale,request.ProductVendor,request.ProductDescription,request.QuantityInStock.Value);
 
             await productRepository.AddAsync(product);
             await unitOfWork.SaveChangesAsync();

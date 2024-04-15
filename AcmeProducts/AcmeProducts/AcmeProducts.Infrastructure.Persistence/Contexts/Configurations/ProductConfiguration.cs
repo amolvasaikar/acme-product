@@ -1,4 +1,5 @@
-﻿using AcmeProducts.Domain.Products.Entities;
+﻿using AcmeProducts.Domain.ProductLines.Entities;
+using AcmeProducts.Domain.Products.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -11,8 +12,12 @@ namespace AcmeProducts.Infrastructure.Persistence.Contexts.Configurations
         {
             builder.HasKey(x => x.Id);
 
-            builder.Property(p => p.Name).HasMaxLength(100);
-            builder.Property(p => p.BarCode).HasMaxLength(50);
+            builder.Property(p => p.ProductName).HasMaxLength(100);
+
+            builder.HasOne(e => e.ProductLine)
+                   .WithMany(e => e.Products)
+                   .HasForeignKey(e => e.ProductLineId)
+                   .IsRequired();
         }
     }
 }

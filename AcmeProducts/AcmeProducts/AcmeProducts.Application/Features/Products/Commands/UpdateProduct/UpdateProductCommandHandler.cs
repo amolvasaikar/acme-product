@@ -19,7 +19,8 @@ namespace AcmeProducts.Application.Features.Products.Commands.UpdateProduct
                 return new BaseResult(new Error(ErrorCode.NotFound, translator.GetString(TranslatorMessages.ProductMessages.Product_notfound_with_id(request.Id)), nameof(request.Id)));
             }
 
-            product.Update(request.Name, request.Price, request.BarCode);
+            product.Update(request.ProductName, request.BuyPrice, request.MSRP, request.ProductLineId, request.ProductCode,
+                request.ProductScale, request.ProductVendor, request.ProductDescription, request.QuantityInStock.Value);
             await unitOfWork.SaveChangesAsync();
 
             return new BaseResult();

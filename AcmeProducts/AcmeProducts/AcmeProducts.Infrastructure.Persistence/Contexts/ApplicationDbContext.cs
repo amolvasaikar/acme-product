@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AcmeProducts.Domain.ProductLines.Entities;
 
 namespace AcmeProducts.Infrastructure.Persistence.Contexts
 {
@@ -19,6 +20,9 @@ namespace AcmeProducts.Infrastructure.Persistence.Contexts
         }
 
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<ProductLine> ProductLines { get; set; }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             var userId = Guid.Parse(authenticatedUser.UserId ?? "00000000-0000-0000-0000-000000000000");
