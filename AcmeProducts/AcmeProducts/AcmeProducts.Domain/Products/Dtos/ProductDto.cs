@@ -1,6 +1,4 @@
 ﻿using AcmeProducts.Domain.Products.Entities;
-using System.Diagnostics;
-using System.Xml.Linq;
 
 namespace AcmeProducts.Domain.Products.Dtos
 {

@@ -8,7 +8,7 @@ namespace AcmeProducts.Domain.Products.Entities
         private Product()
         {
         }
-        public Product(string productName, double buyPrice, string msrp ,long productLineId , string productCode, 
+        public Product(string productName, double buyPrice, string msrp, long productLineId, string productCode,
             string productScale, string productVendor , string productDescription , int quantityInStock)
         {
             ProductName = productName;
