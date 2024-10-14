@@ -27,13 +27,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeProducts.Infrastructure
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{66B22CDE-21AD-43BA-83A4-9558DFAAA4E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeProducts.Domain.Test", "AcmeProducts.Domain.Test\AcmeProducts.Domain.Test.csproj", "{5A6F87ED-F377-4B00-AB7C-CFD3B54FA215}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeProducts.Domain.Test", "AcmeProducts.Domain.Test\AcmeProducts.Domain.Test.csproj", "{5A6F87ED-F377-4B00-AB7C-CFD3B54FA215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeProducts.Application.Test", "AcmeProducts.Application.Test\AcmeProducts.Application.Test.csproj", "{A726579A-DAC7-4314-B653-6DD123B2C052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeProducts.Application.Test", "AcmeProducts.Application.Test\AcmeProducts.Application.Test.csproj", "{A726579A-DAC7-4314-B653-6DD123B2C052}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeProducts.WebApi.Test", "AcmeProducts.WebApi.Test\AcmeProducts.WebApi.Test.csproj", "{FC8D3031-7A1C-4836-94AC-36DC1AB43E5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeProducts.WebApi.Test", "AcmeProducts.WebApi.Test\AcmeProducts.WebApi.Test.csproj", "{FC8D3031-7A1C-4836-94AC-36DC1AB43E5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeProducts.WebApi.IntegrationTest", "AcmeProducts.WebApi.IntegrationTest\AcmeProducts.WebApi.IntegrationTest.csproj", "{D7147BAE-74A7-482C-914C-01353646170B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcmeProducts.WebApi.IntegrationTest", "AcmeProducts.WebApi.IntegrationTest\AcmeProducts.WebApi.IntegrationTest.csproj", "{D7147BAE-74A7-482C-914C-01353646170B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D7A9CEC7-D315-4364-85C5-C17ECF9613FF}"
+	ProjectSection(SolutionItems) = preProject
+		RuleSet1.ruleset = RuleSet1.ruleset
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

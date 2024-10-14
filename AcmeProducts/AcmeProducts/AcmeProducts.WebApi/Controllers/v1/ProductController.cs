@@ -16,7 +16,11 @@ namespace AcmeProducts.WebApi.Controllers.v1
 
         [HttpGet]
         public async Task<PagedResponse<ProductDto>> GetPagedListProduct([FromQuery] GetPagedListProductQuery model)
-            => await Mediator.Send(model);
+        {
+            int number;
+            return await Mediator.Send(model);
+        }
+            
 
         [HttpGet]
         public async Task<BaseResult<ProductDto>> GetProductById([FromQuery] GetProductByIdQuery model)

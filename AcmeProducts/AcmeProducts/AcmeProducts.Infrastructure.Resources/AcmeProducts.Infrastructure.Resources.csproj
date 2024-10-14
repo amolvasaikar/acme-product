@@ -13,10 +13,6 @@
 		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
 		<PackageReference Include="MimeKit" Version="4.3.0" />
-		<PackageReference Include="SonarAnalyzer.CSharp" Version="9.30.0.95878">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
 		<PackageReference Include="System.ServiceModel.Http" Version="6.2.0" />
 		<PackageReference Include="System.ServiceModel.Primitives" Version="6.2.0" />
 	</ItemGroup>
